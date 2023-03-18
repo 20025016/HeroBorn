@@ -29,7 +29,15 @@ public class LearningCurve : MonoBehaviour
         Debug.Log(explicitConversion);
 
         var currentAge = 32;
+        currentAge = currentAge * 2;
+        currentAge *= 2;
         Debug.Log(currentAge);
+
+        string fullName = "Harrison " + "Ferrone";
+        fullName = $"{"Harrison"} {"Ferrone"}";
+        Debug.Log(fullName);
+
+        //Debug.Log(FirstName * Pi);
     }
 
     /// <summary>
