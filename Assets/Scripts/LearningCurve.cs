@@ -17,8 +17,10 @@ public class LearningCurve : MonoBehaviour
 
     }
 
-    public void GenerateCharacter(string name, int level)
+    public int GenerateCharacter(string name, int level)
     {
         Debug.LogFormat("Character: {0} - Level: {1}", name, level);
+
+        return level += 5;
     }
 }
