@@ -8,7 +8,9 @@ public class LearningCurve : MonoBehaviour
     void Start()
     {
         int characterLevel = 32;
-        GenerateCharacter("Spike", characterLevel);
+        int nextSkillLevel = GenerateCharacter("Spike", characterLevel);
+        Debug.Log(nextSkillLevel);
+        Debug.Log(GenerateCharacter("Faye", characterLevel));
     }
 
     // Update is called once per frame
@@ -19,8 +21,7 @@ public class LearningCurve : MonoBehaviour
 
     public int GenerateCharacter(string name, int level)
     {
-        Debug.LogFormat("Character: {0} - Level: {1}", name, level);
-
+        //Debug.LogFormat("Character: {0} - Level: {1}", name, level);
         return level += 5;
     }
 }
