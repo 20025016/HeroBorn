@@ -7,9 +7,8 @@ public class LearningCurve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("\"Choose\" a character.");
-        GenerateCharacter();
-        Debug.Log("A fine choice.");
+        int characterLevel = 32;
+        GenerateCharacter("Spike", characterLevel);
     }
 
     // Update is called once per frame
@@ -18,8 +17,8 @@ public class LearningCurve : MonoBehaviour
 
     }
 
-    public void GenerateCharacter()
+    public void GenerateCharacter(string name, int level)
     {
-        Debug.Log("Character: Spike");
+        Debug.LogFormat("Character: {0} - Level: {1}", name, level);
     }
 }
