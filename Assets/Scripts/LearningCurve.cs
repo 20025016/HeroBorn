@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    public bool HasDungeonKey = false;
-    public string WeaponType = "Arcane Staff";
+    public bool WeaponEquipped = true;
+    public string WeaponType = "Longsword";
     private void Start()
     {
-        if (!HasDungeonKey)
+        if (WeaponEquipped)
         {
-            Debug.Log("You may not enter without the sacred key.");
-        } 
-        
-        if (WeaponType != "Longsword")
+            if (WeaponType == "Longsword")
+            {
+                Debug.Log("For the queen!");
+            }
+        }
+        else
         {
-            Debug.Log("You don't appear to have the right type of weapon...");
+            Debug.Log("Fists aren't going to work against armour...");
         }
     }
 }
