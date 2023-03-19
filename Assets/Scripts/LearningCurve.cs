@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    public bool WeaponEquipped = true;
-    public string WeaponType = "Longsword";
+    public bool PureOfHeart = true;
+    public bool HasSecretIncantation = false;
+    public string RareItem = "Relic Stone";
     private void Start()
     {
-        if (WeaponEquipped)
+        OpenTreasureChamber();
+    }
+
+    public void OpenTreasureChamber()
+    {
+        if (PureOfHeart && RareItem == "Relic Stone")
         {
-            if (WeaponType == "Longsword")
+            if (!HasSecretIncantation)
             {
-                Debug.Log("For the queen!");
+                Debug.Log("You have the spirit, but not the knowledge.");
+            }
+            else
+            {
+                Debug.Log("The treasure is yours, worthy hero!");
             }
         }
         else
         {
-            Debug.Log("Fists aren't going to work against armour...");
+            Debug.Log("Come back when you have what it takes.");
         }
     }
 }
