@@ -4,27 +4,10 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    public int DiceRoll = 7;
-
-    private void Start()
-    {
-        RollDice();
-    }
-
-    public void RollDice()
-    {
-        switch (DiceRoll)
-        {
-            case 7:
-            case 15:
-                Debug.Log("Mediocre damage, not bad.");
-                break;
-            case 20:
-                Debug.Log("Critical hit, the creature goes down!");
-                break;
-            default:
-                Debug.Log("You completely missed and fell on your face.");
-                break;
-        }
-    }
+    // Empty array with default values
+    private int[] Teams1 = new int[3];
+    // Longhand initialiser
+    private int[] Teams2 = new int[] { 713, 549, 984 };
+    // Shorthand initialiser
+    private int[] Teams3 = { 713, 549, 984 };
 }
