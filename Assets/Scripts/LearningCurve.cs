@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    public string CharacterAction = "Attack";
+    public int DiceRoll = 7;
 
     private void Start()
     {
-        PrintCharacterAction();
+        RollDice();
     }
 
-    public void PrintCharacterAction()
+    public void RollDice()
     {
-        switch (CharacterAction)
+        switch (DiceRoll)
         {
-            case "Heal":
-                Debug.Log("Potion sent.");
+            case 7:
+            case 15:
+                Debug.Log("Mediocre damage, not bad.");
                 break;
-            case "Attack":
-                Debug.Log("To arms!");
+            case 20:
+                Debug.Log("Critical hit, the creature goes down!");
                 break;
             default:
-                Debug.Log("Shields up.");
+                Debug.Log("You completely missed and fell on your face.");
                 break;
         }
     }
