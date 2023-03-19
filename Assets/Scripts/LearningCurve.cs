@@ -14,5 +14,23 @@ public class LearningCurve : MonoBehaviour
         };
 
         Debug.LogFormat("Items: {0}", itemInventory.Count);
+
+        int numberOfPotions = itemInventory["Potion"];
+
+        itemInventory["Potion"] = 10;
+
+        itemInventory.Add("Throwing Knife", 3);
+
+        itemInventory["Bandage"] = 5;
+
+        if (itemInventory.ContainsKey("Aspirin"))
+        {
+            itemInventory["Aspirin"] = 3;
+        }
+
+        itemInventory.Remove("Antidote");
+
+        // Outputs 4
+        Debug.LogFormat("Items: {0}", itemInventory.Count);
     }
 }
