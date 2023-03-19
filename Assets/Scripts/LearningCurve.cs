@@ -6,31 +6,28 @@ public class LearningCurve : MonoBehaviour
 {
     private void Start()
     {
-        Dictionary<string, int> itemInventory = new Dictionary<string, int>()
+        FindPartyMember();
+    }
+
+    public void FindPartyMember()
+    {
+        List<string> questPartyMembers = new List<string>()
         {
-            { "Potion", 5 },
-            { "Antidote", 7 },
-            { "Aspirin", 1 }
+            "Grim the Barbarian",
+            "Merlin the Wise",
+            "Sterling the Knight"
         };
 
-        Debug.LogFormat("Items: {0}", itemInventory.Count);
+        int questPartySize = questPartyMembers.Count;
 
-        int numberOfPotions = itemInventory["Potion"];
-
-        itemInventory["Potion"] = 10;
-
-        itemInventory.Add("Throwing Knife", 3);
-
-        itemInventory["Bandage"] = 5;
-
-        if (itemInventory.ContainsKey("Aspirin"))
+        Debug.LogFormat("Quest Party Size: {0}", questPartySize);
+        for (int i = 0; i < questPartySize; i++)
         {
-            itemInventory["Aspirin"] = 3;
+            Debug.LogFormat("Index: {0} - {1}", i, questPartyMembers[i]);
+            if (questPartyMembers[i] == "Merlin the Wise")
+            {
+                Debug.Log("Glad you're here Merlin!");
+            }
         }
-
-        itemInventory.Remove("Antidote");
-
-        // Outputs 4
-        Debug.LogFormat("Items: {0}", itemInventory.Count);
     }
 }
