@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    public bool PureOfHeart = true;
-    public bool HasSecretIncantation = false;
-    public string RareItem = "Relic Stone";
+    public string CharacterAction = "Attack";
+
     private void Start()
     {
-        OpenTreasureChamber();
+        PrintCharacterAction();
     }
 
-    public void OpenTreasureChamber()
+    public void PrintCharacterAction()
     {
-        if (PureOfHeart && RareItem == "Relic Stone")
+        switch (CharacterAction)
         {
-            if (!HasSecretIncantation)
-            {
-                Debug.Log("You have the spirit, but not the knowledge.");
-            }
-            else
-            {
-                Debug.Log("The treasure is yours, worthy hero!");
-            }
-        }
-        else
-        {
-            Debug.Log("Come back when you have what it takes.");
+            case "Heal":
+                Debug.Log("Potion sent.");
+                break;
+            case "Attack":
+                Debug.Log("To arms!");
+                break;
+            default:
+                Debug.Log("Shields up.");
+                break;
         }
     }
 }
