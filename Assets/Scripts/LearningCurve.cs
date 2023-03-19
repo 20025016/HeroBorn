@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int CurrentGold = 32;
+    private void Start()
     {
-        int characterLevel = 32;
-        int nextSkillLevel = GenerateCharacter("Spike", characterLevel);
-        Debug.Log(nextSkillLevel);
-        Debug.Log(GenerateCharacter("Faye", characterLevel));
+        Thievery();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Thievery()
     {
-
-    }
-
-    public int GenerateCharacter(string name, int level)
-    {
-        //Debug.LogFormat("Character: {0} - Level: {1}", name, level);
-        return level += 5;
+        if (CurrentGold > 50)
+        {
+            Debug.Log("You're rolling in it!");
+        } else if (CurrentGold < 15)
+        {
+            Debug.Log("Not much there to steal...");
+        }
+        else
+        {
+            Debug.Log("Looks like your purse is in the sweet spot.");
+        }
     }
 }
