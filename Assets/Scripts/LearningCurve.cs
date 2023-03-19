@@ -4,25 +4,43 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    // Empty array with default values
-    private int[] Team1 = new int[3];
-    // Longhand initialiser
-    private int[] Team2 = new int[] { 713, 549, 984 };
-    // Shorthand initialiser
-    private int[] Team3 = { 713, 549, 984 };
+    // Two dimensional array
+    private int[,] Coordinates2d = new int[3, 2]
+    {
+        { 5, 4 },
+        { 1, 7 },
+        { 9, 3 }
+    };
+
+    // Three dimensional array
+    private int[,,] Coordinates3d = new int[3, 3, 2]
+    {
+        { { 1, 2 }, { 3, 4 }, { 5, 6 } },
+        { { 7, 8 }, { 9, 10 }, { 11, 12 } },
+        { { 13, 14 }, { 15, 16 }, { 17, 18 } },
+    };
 
     private void Start()
     {
         /*
-         * Arrays zero index based
-         * Team2[1] results in 549
+         * First row, first column
+         * Value is 4
          */
-        Debug.Log(Team2[1]);
+        int coordinateValue = Coordinates2d[0, 1];
+        Debug.Log(coordinateValue);
+
         /*
-         * Modifying an element 
-         * Team2[1] results in 550
+         * First row, first column
+         * Value is now set to 10
          */
-        Team2[1] = 550;
-        Debug.Log(Team2[1]);
+        Coordinates2d[0, 1] = 10;
+        coordinateValue = Coordinates2d[0, 1];
+        Debug.Log(coordinateValue);
+
+        /*
+         * Second row, third column, second element
+         * Value is 12
+         */
+        Debug.Log(Coordinates3d[1, 2, 1]);
     }
 }
