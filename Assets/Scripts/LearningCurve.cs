@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    public int CurrentGold = 32;
+    public bool HasDungeonKey = false;
+    public string WeaponType = "Arcane Staff";
     private void Start()
     {
-        Thievery();
-    }
-
-    public void Thievery()
-    {
-        if (CurrentGold > 50)
+        if (!HasDungeonKey)
         {
-            Debug.Log("You're rolling in it!");
-        } else if (CurrentGold < 15)
+            Debug.Log("You may not enter without the sacred key.");
+        } 
+        
+        if (WeaponType != "Longsword")
         {
-            Debug.Log("Not much there to steal...");
-        }
-        else
-        {
-            Debug.Log("Looks like your purse is in the sweet spot.");
+            Debug.Log("You don't appear to have the right type of weapon...");
         }
     }
 }
