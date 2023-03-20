@@ -6,6 +6,8 @@ public class LearningCurve : MonoBehaviour
 {
     private void Start()
     {
+        int playerGold = 8;
+
         Dictionary<string, int> itemInventory = new Dictionary<string, int>()
         {
             { "Potion", 5 },
@@ -16,6 +18,11 @@ public class LearningCurve : MonoBehaviour
         foreach(KeyValuePair<string, int> kvp in itemInventory)
         {
             Debug.LogFormat("Item: {0} - {1}g", kvp.Key, kvp.Value);
+
+            if (playerGold >= kvp.Value)
+            {
+                Debug.LogFormat("This {0} item is affordable", kvp.Key);
+            }
         }
     }
 }
