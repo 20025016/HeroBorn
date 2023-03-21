@@ -6,12 +6,19 @@ public class Character
 {
     public string Name;
     public int Exp = 0;
+
     public Character()
     {
         Name = "not assigned";
     }
+
     public Character(string name)
     {
         this.Name = name;
+    }
+
+    public void PrintStatsInfo()
+    {
+        Debug.LogFormat("Hero: {0} - {1} EXP", this.Name, this.Exp);
     }
 }
