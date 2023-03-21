@@ -6,11 +6,13 @@ public class LearningCurve : MonoBehaviour
 {
     private void Start()
     {
-        Character hero = new Character();
-        Character villain = hero;
-        villain.Name = "Sir Kane the Bold";
+        Weapon huntingBow = new Weapon("Hunting Bow", 105);
+        Weapon warBow = huntingBow;
 
-        hero.PrintStatsInfo();
-        villain.PrintStatsInfo();
+        warBow.Name = "War Bow";
+        warBow.Damage = 155;
+
+        huntingBow.PrintWeaponStats();
+        warBow.PrintWeaponStats();
     }
 }
