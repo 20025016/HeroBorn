@@ -17,7 +17,7 @@ public class Character
         this.Name = name;
     }
 
-    public void PrintStatsInfo()
+    public virtual void PrintStatsInfo()
     {
         Debug.LogFormat("Hero: {0} - {1} EXP", this.Name, this.Exp);
     }
