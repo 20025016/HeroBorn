@@ -6,13 +6,12 @@ public class LearningCurve : MonoBehaviour
 {
     private void Start()
     {
-        Weapon huntingBow = new Weapon("Hunting Bow", 105);
-        Weapon warBow = huntingBow;
+        Character hero = new Character();
+        hero.PrintStatsInfo();
 
-        warBow.Name = "War Bow";
-        warBow.Damage = 155;
-
-        huntingBow.PrintWeaponStats();
-        warBow.PrintWeaponStats();
+        Character heroine = new Character("Agatha");
+        heroine.PrintStatsInfo();
+        //Inaccessible due to its protection level
+        //heroine.Reset();
     }
 }
