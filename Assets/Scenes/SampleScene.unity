@@ -322,5 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965c17bf283458743943628291d2139d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponEquipped: 1
-  WeaponType: Longsword
+  CamTransform: {fileID: 0}
+  DirectionLight: {fileID: 705507993}
+  LightTransform: {fileID: 0}
