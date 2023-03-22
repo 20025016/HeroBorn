@@ -11,7 +11,8 @@ public class LearningCurve : MonoBehaviour
 
         Character heroine = new Character("Agatha");
         heroine.PrintStatsInfo();
-        //Inaccessible due to its protection level
-        //heroine.Reset();
+
+        Paladin knight = new Paladin("Sir Arthur");
+        knight.PrintStatsInfo();
     }
 }

@@ -9,7 +9,7 @@ public class Character
 
     public Character()
     {
-        Reset();
+        this.Name = "Not assigned";
     }
 
     public Character(string name)
@@ -20,11 +20,5 @@ public class Character
     public void PrintStatsInfo()
     {
         Debug.LogFormat("Hero: {0} - {1} EXP", this.Name, this.Exp);
-    }
-
-    private void Reset()
-    {
-        this.Name = "Not assigned";
-        this.Exp = 0;
     }
 }
