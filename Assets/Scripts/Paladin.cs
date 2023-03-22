@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Paladin : Character
 {
-    public Paladin(string name) : base(name)
-    {
+    public Weapon Weapon;
 
+    public Paladin(string name, Weapon weapon) : base(name)
+    {
+        this.Weapon = weapon;
     }
 }

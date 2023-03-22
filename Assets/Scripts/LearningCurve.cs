@@ -12,7 +12,9 @@ public class LearningCurve : MonoBehaviour
         Character heroine = new Character("Agatha");
         heroine.PrintStatsInfo();
 
-        Paladin knight = new Paladin("Sir Arthur");
+        Weapon huntingBow = new Weapon("Hunting Bow", 105);
+
+        Paladin knight = new Paladin("Sir Arthur", huntingBow);
         knight.PrintStatsInfo();
     }
 }
