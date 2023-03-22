@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
+    public Transform CamTransform;
+    public GameObject DirectionLight;
+    public Transform LightTransform;
+    
     private void Start()
     {
-        Character hero = new Character();
-        hero.PrintStatsInfo();
+        CamTransform = this.GetComponent<Transform>();
+        Debug.Log(CamTransform.localPosition);
 
-        Character heroine = new Character("Agatha");
-        heroine.PrintStatsInfo();
-
-        Weapon huntingBow = new Weapon("Hunting Bow", 105);
-
-        Paladin knight = new Paladin("Sir Arthur", huntingBow);
-        knight.PrintStatsInfo();
+        DirectionLight = GameObject.Find("Directional Light");
+        LightTransform = DirectionLight.GetComponent<Transform>();
+        Debug.Log(LightTransform.localPosition);
     }
 }
