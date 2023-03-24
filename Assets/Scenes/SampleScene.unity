@@ -1249,6 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3120ea09d87ea0f48b6539c485c050d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraOffset: {x: 0, y: 1.2, z: -2.6}
 --- !u!1 &1277719730
 GameObject:
   m_ObjectHideFlags: 0
