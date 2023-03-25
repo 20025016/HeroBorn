@@ -2010,6 +2010,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2578766742994010871, guid: fe167f697a164ac49873acd093fd1811, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 5077681555548773945, guid: 43fc4e7132d058e4ab823883cb2d6698, type: 3}
+    - target: {fileID: 2578766742994010871, guid: fe167f697a164ac49873acd093fd1811, type: 3}
       propertyPath: GroundLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
